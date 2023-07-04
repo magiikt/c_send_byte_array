@@ -4,12 +4,10 @@
 Par défaut, la taille du message est de 30 octets, mais vous pouvez configurer la variable définie "TABLEAU_SIZE" si nécessaire.
 
 Pour ajouter n'importe quel type de données au tableau de message qui sera envoyé, utilisez convertTypeToArrayThenConcatenateToMessage avec le nom de la variable correspondant au bon type, puis mettez 0 pour les autres types.
-convertTypeToArrayThenConcatenateToMessage(char char_var, short short_var, int int_var, long long_var, float float_var, double double_var, long double longdouble_var)
 Par exemple, pour ajouter une valeur flottante :
 convertTypeToArrayThenConcatenateToMessage(0, 0, 0, 0, float_var, 0, 0) ;
 
 Pour ajouter un tableau d'octets au tableau de messages qui sera envoyé, utilisez concatenateArrayToMessage et spécifiez la longueur du tableau d'octet.
-concatenateArrayToMessage(uint8_t buffer_array[], size_t size, uint8_t tableau_array[])
 Par exemple, pour ajouter un tableau d'octets de 4 octets :
 concatenateArrayToMessage(buffer_array, 4, tableau_array) ;
 
