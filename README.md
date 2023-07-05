@@ -1,8 +1,8 @@
-### Concatenate c variables into a byte array to be sent, then decode the byte array received as hexadecimal into javascript variables
+# Concatenate c variables into a byte array to be sent, then decode the byte array received as hexadecimal into javascript variables
 
 ## main.c
 
-# FRENCH
+### FRENCH
 
 Cette partie contient des fonctions permettant de convertir des variables en c en tableau d'octet, puis de concatener ces tableau d'octet en un tableau d'octet final qui sera envoyé par la fonction send.
 
@@ -35,7 +35,7 @@ concatenateArrayToMessage(buffer_array, 4, tableau_array) ;
 
 Ce code ne contient pas la partie permettant l'envoie du tableau d'octet.
 
-# ENGLISH
+### ENGLISH
 
 This section contains functions for converting c variables into byte arrays, then concatenating these byte arrays into a final byte array to be sent by the send function.
 
@@ -71,7 +71,7 @@ This code does not contain the part allowing the byte array to be sent.
 
 ## script.js
 
-# FRENCH
+### FRENCH
 
 Cette partie contient des fonctions permettant de décoder le message, qui est un tableau d'octet, en variables javascript.
 
@@ -108,7 +108,7 @@ const hexToFloat32 = (int) => {
 }
 ```
 
-# ENGLISH
+### ENGLISH
 
 This part contains functions used to decode the message, which is an array of bytes, into javascript variables.
 
