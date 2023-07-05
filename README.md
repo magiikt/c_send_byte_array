@@ -6,12 +6,13 @@
 
 Cette partie contient des fonctions permettant de convertir des variables en c en tableau d'octet, puis de concatener ces tableau d'octet en un tableau d'octet final qui sera envoyé par la fonction send.
 
+#### MESSAGE_SIZE
 ```
 #define MESSAGE_SIZE 30
 ```
 Par défaut, la taille du message est de 30 octets, mais vous pouvez configurer la variable définie "TABLEAU_SIZE" si nécessaire.
 
-
+#### convertTypeToArrayThenConcatenateToMessage
 ```
 void convertTypeToArrayThenConcatenateToMessage(char char_var, short short_var,
                                                 int int_var, long long_var,
@@ -22,8 +23,9 @@ void convertTypeToArrayThenConcatenateToMessage(char char_var, short short_var,
 Pour ajouter n'importe quel type de données au tableau de message qui sera envoyé, utilisez convertTypeToArrayThenConcatenateToMessage avec le nom de la variable correspondant au bon type, puis mettez 0 pour les autres types.
 
 Par exemple, pour ajouter une valeur flottante :
-convertTypeToArrayThenConcatenateToMessage(0, 0, 0, 0, float_var, 0, 0) ;
+```convertTypeToArrayThenConcatenateToMessage(0, 0, 0, 0, float_var, 0, 0); ```
 
+#### concatenateArrayToMessage
 ```
 void concatenateArrayToMessage(uint8_t buffer_array[], size_t size,
                                uint8_t message_array[])
@@ -31,7 +33,7 @@ void concatenateArrayToMessage(uint8_t buffer_array[], size_t size,
 Pour ajouter un tableau d'octets au tableau de messages qui sera envoyé, utilisez concatenateArrayToMessage et spécifiez la longueur du tableau d'octet.
 
 Par exemple, pour ajouter un tableau d'octets de 4 octets :
-concatenateArrayToMessage(buffer_array, 4, tableau_array) ;
+```concatenateArrayToMessage(buffer_array, 4, tableau_array); ```
 
 Ce code ne contient pas la partie permettant l'envoie du tableau d'octet.
 
@@ -39,11 +41,13 @@ Ce code ne contient pas la partie permettant l'envoie du tableau d'octet.
 
 This section contains functions for converting c variables into byte arrays, then concatenating these byte arrays into a final byte array to be sent by the send function.
 
+#### MESSAGE_SIZE
 ```
 #define MESSAGE_SIZE 30
 ```
 By default, the size for the message is 30 bytes, but you can configure the defined "TABLEAU_SIZE" variable if needed.
 
+#### convertTypeToArrayThenConcatenateToMessage
 ```
 void convertTypeToArrayThenConcatenateToMessage(char char_var, short short_var,
                                                 int int_var, long long_var,
@@ -52,11 +56,12 @@ void convertTypeToArrayThenConcatenateToMessage(char char_var, short short_var,
                                                 long double longdouble_var)
 ```
 To add any data type to the message array that will be sent, use convertTypeToArrayThenConcatenateToMessage with the variable name corresponding to the correct type, then put 0 for other types.
-convertTypeToArrayThenConcatenateToMessage(char char_var, short short_var, int int_var, long long_var, float float_var, double double_var, long double longdouble_var)
+```convertTypeToArrayThenConcatenateToMessage(char char_var, short short_var, int int_var, long long_var, float float_var, double double_var, long double longdouble_var)```
 
 For example, to add a float value:
 convertTypeToArrayThenConcatenateToMessage(0, 0, 0, 0, float_var, 0, 0);
 
+#### concatenateArrayToMessage
 ```
 void concatenateArrayToMessage(uint8_t buffer_array[], size_t size,
                                uint8_t message_array[])
@@ -65,7 +70,7 @@ To add a byte array to the message array that will be sent, use concatenateArray
 concatenateArrayToMessage(uint8_t buffer_array[], size_t size, uint8_t tableau_array[])
 
 For example, to add a byte array of 4 bytes :
-concatenateArrayToMessage(buffer_array, 4, tableau_array);
+```concatenateArrayToMessage(buffer_array, 4, tableau_array);```
 
 This code does not contain the part allowing the byte array to be sent.
 
