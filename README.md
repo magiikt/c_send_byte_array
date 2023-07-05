@@ -56,10 +56,9 @@ void convertTypeToArrayThenConcatenateToMessage(char char_var, short short_var,
                                                 long double longdouble_var)
 ```
 To add any data type to the message array that will be sent, use convertTypeToArrayThenConcatenateToMessage with the variable name corresponding to the correct type, then put 0 for other types.
-```convertTypeToArrayThenConcatenateToMessage(char char_var, short short_var, int int_var, long long_var, float float_var, double double_var, long double longdouble_var)```
 
 For example, to add a float value:
-convertTypeToArrayThenConcatenateToMessage(0, 0, 0, 0, float_var, 0, 0);
+```convertTypeToArrayThenConcatenateToMessage(0, 0, 0, 0, float_var, 0, 0);```
 
 #### concatenateArrayToMessage
 ```
@@ -67,7 +66,6 @@ void concatenateArrayToMessage(uint8_t buffer_array[], size_t size,
                                uint8_t message_array[])
 ```
 To add a byte array to the message array that will be sent, use concatenateArrayToMessage and specify the length of the array.
-concatenateArrayToMessage(uint8_t buffer_array[], size_t size, uint8_t tableau_array[])
 
 For example, to add a byte array of 4 bytes :
 ```concatenateArrayToMessage(buffer_array, 4, tableau_array);```
